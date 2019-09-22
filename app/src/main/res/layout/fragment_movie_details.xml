@@ -18,16 +18,18 @@
                    app:layout_constraintEnd_toEndOf="parent"
                    app:layout_constraintTop_toTopOf="parent"/>
 
+        <ImageView android:id="@+id/fav_icon"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:padding="20dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:tint="#ffd503"
+        android:src="@drawable/ic_star"/>
+
         <androidx.constraintlayout.widget.Guideline android:id="@+id/top_guideline"
                                                     android:orientation="horizontal"
                                                     app:layout_constraintGuide_percent="0.2"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"/>
-
-        <androidx.constraintlayout.widget.Guideline android:id="@+id/guideline"
-                                                    android:orientation="horizontal"
-                                                    app:layout_constraintTop_toBottomOf="@+id/main_img"
-                                                    app:layout_constraintGuide_percent="0.23"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"/>
 
@@ -45,8 +47,10 @@
                   android:textColor="@android:color/white"
                   android:textSize="19sp"
                   android:textStyle="bold"
+                  android:layout_marginTop="170dp"
                   app:layout_constraintStart_toEndOf="@+id/logo"
-                  app:layout_constraintTop_toBottomOf="@+id/guideline"
+                  app:layout_constraintTop_toTopOf="@id/main_img"
+                  app:layout_constraintBottom_toBottomOf="@id/main_img"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"/>
 
@@ -87,6 +91,7 @@
                   app:layout_constraintStart_toStartOf="parent"
                   app:layout_constraintEnd_toEndOf="parent"
                   app:layout_constraintTop_toBottomOf="@+id/logo"
+                  app:layout_constraintBottom_toTopOf="@+id/similar_txt"
                   android:textColor="@android:color/black"
                   android:layout_marginStart="15dp"
                   android:layout_marginTop="15dp"
@@ -103,7 +108,7 @@
                   app:layout_constraintTop_toBottomOf="@+id/overview"
                   android:layout_marginStart="15dp"
                   android:layout_marginTop="5dp"
-                  tools:text="Similar Movies"
+                  android:text="Similar Movies"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"/>
 

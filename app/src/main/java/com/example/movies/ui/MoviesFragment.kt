@@ -17,6 +17,7 @@ import com.example.movies.R
 import com.example.movies.find
 import com.example.movies.model.Request
 import com.example.movies.model.ResultsItem
+import com.example.movies.utils.DateUtils
 import com.squareup.picasso.Picasso
 
 class MoviesFragment : BaseFragment() {
@@ -98,7 +99,7 @@ class MoviesFragment : BaseFragment() {
                             .load("https://image.tmdb.org/t/p/w500/${posterPath}")
                             .into(find<ImageView>(R.id.poster_img))
 
-                        find<TextView>(R.id.release_date).text = releaseDate
+                        find<TextView>(R.id.release_date).text = DateUtils.format(releaseDate?: "")
                         find<TextView>(R.id.title).text = title
                         find<TextView>(R.id.description).text = overview
                         find<TextView>(R.id.rating).text = voteAverage?.toString()
